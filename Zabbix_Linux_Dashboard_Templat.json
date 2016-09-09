@@ -1,0 +1,1418 @@
+{
+  "id": 21,
+  "title": "Zabbix Server List copy",
+  "description": "Zabbix Server List",
+  "tags": [
+    "Servers"
+  ],
+  "style": "dark",
+  "timezone": "browser",
+  "editable": true,
+  "hideControls": false,
+  "sharedCrosshair": false,
+  "rows": [
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "Zabbix",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 1,
+          "isNew": true,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "repeatIteration": 1473389274200,
+          "scopedVars": {
+            "Group": {
+              "selected": true,
+              "text": "Zabbix servers",
+              "value": "Zabbix servers"
+            }
+          },
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "CPU"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$Group"
+              },
+              "host": {
+                "filter": "$Host"
+              },
+              "item": {
+                "filter": "Interrupts per second"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            },
+            {
+              "application": {
+                "filter": "CPU"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$Group"
+              },
+              "host": {
+                "filter": "$Host"
+              },
+              "item": {
+                "filter": "Context switches per second"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "C"
+            },
+            {
+              "application": {
+                "filter": "CPU"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$Group"
+              },
+              "host": {
+                "filter": "$Host"
+              },
+              "item": {
+                "filter": "/CPU i.*/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "application": {
+                "filter": "CPU"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$Group"
+              },
+              "host": {
+                "filter": "$Host"
+              },
+              "item": {
+                "filter": "CPU system time"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "D"
+            },
+            {
+              "application": {
+                "filter": "CPU"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$Group"
+              },
+              "host": {
+                "filter": "$Host"
+              },
+              "item": {
+                "filter": "CPU user time"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "E"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "CPU",
+          "tooltip": {
+            "msResolution": true,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "Zabbix",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 2,
+          "isNew": true,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "repeatIteration": 1473389274200,
+          "scopedVars": {
+            "Group": {
+              "selected": true,
+              "text": "Zabbix servers",
+              "value": "Zabbix servers"
+            }
+          },
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Memory and Swap"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$Group"
+              },
+              "host": {
+                "filter": "$Host"
+              },
+              "item": {
+                "filter": "/.*Memory.*/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "application": {
+                "filter": "Memory and Swap"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$Group"
+              },
+              "host": {
+                "filter": "$Host"
+              },
+              "item": {
+                "filter": "/.*Swap.*/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Memory & Swap",
+          "tooltip": {
+            "msResolution": true,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "Zabbix",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 6,
+          "isNew": true,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "repeatIteration": 1473389274200,
+          "scopedVars": {
+            "Group": {
+              "selected": true,
+              "text": "Zabbix servers",
+              "value": "Zabbix servers"
+            }
+          },
+          "seriesOverrides": [
+            {
+              "alias": "Total disk space on /"
+            }
+          ],
+          "span": 6,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Processes"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$Group"
+              },
+              "host": {
+                "filter": "$Host"
+              },
+              "item": {
+                "filter": "/.*/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Processes",
+          "tooltip": {
+            "msResolution": true,
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "Zabbix",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 5,
+          "isNew": true,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "sideWidth": null,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "repeatIteration": 1473389274200,
+          "scopedVars": {
+            "Group": {
+              "selected": true,
+              "text": "Zabbix servers",
+              "value": "Zabbix servers"
+            }
+          },
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "CPU"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$Group"
+              },
+              "host": {
+                "filter": "$Host"
+              },
+              "item": {
+                "filter": "/.*load/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "CPU Load",
+          "tooltip": {
+            "msResolution": true,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "Zabbix",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 8,
+          "isNew": true,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "sideWidth": null,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "repeatIteration": 1473389274200,
+          "scopedVars": {
+            "Group": {
+              "selected": true,
+              "text": "Zabbix servers",
+              "value": "Zabbix servers"
+            }
+          },
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Filesystems"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$Group"
+              },
+              "host": {
+                "filter": "$Host"
+              },
+              "item": {
+                "filter": "/Total.*/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "application": {
+                "filter": "Filesystems"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$Group"
+              },
+              "host": {
+                "filter": "$Host"
+              },
+              "item": {
+                "filter": "/Used.*/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            },
+            {
+              "application": {
+                "filter": "Filesystems"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$Group"
+              },
+              "host": {
+                "filter": "$Host"
+              },
+              "item": {
+                "filter": "/Free disk.*per/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "C"
+            },
+            {
+              "application": {
+                "filter": "Filesystems"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$Group"
+              },
+              "host": {
+                "filter": "$Host"
+              },
+              "item": {
+                "filter": "/inode.*/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "D"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Filesystems",
+          "tooltip": {
+            "msResolution": true,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "Zabbix",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 4,
+          "isNew": true,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "repeatIteration": 1473389274200,
+          "scopedVars": {
+            "Group": {
+              "selected": true,
+              "text": "Zabbix servers",
+              "value": "Zabbix servers"
+            }
+          },
+          "seriesOverrides": [
+            {
+              "alias": "Total disk space on /"
+            }
+          ],
+          "span": 6,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Disk status"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$Group"
+              },
+              "host": {
+                "filter": "$Host"
+              },
+              "item": {
+                "filter": "/.*/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "slaProperty": {
+                "name": "Status",
+                "property": "status"
+              }
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Disk status",
+          "tooltip": {
+            "msResolution": true,
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "Zabbix",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 7,
+          "isNew": true,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "repeatIteration": 1473389274200,
+          "scopedVars": {
+            "Group": {
+              "selected": true,
+              "text": "Zabbix servers",
+              "value": "Zabbix servers"
+            }
+          },
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "OS"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$Group"
+              },
+              "host": {
+                "filter": "$Host"
+              },
+              "item": {
+                "filter": "Number of logged in users"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            },
+            {
+              "application": {
+                "filter": "OS"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$Group"
+              },
+              "host": {
+                "filter": "$Host"
+              },
+              "item": {
+                "filter": "Maximum number of opened files"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Security",
+          "tooltip": {
+            "msResolution": true,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "Zabbix",
+          "editable": true,
+          "error": false,
+          "fill": 2,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 3,
+          "isNew": true,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "repeatIteration": 1473389274200,
+          "scopedVars": {
+            "Group": {
+              "selected": true,
+              "text": "Zabbix servers",
+              "value": "Zabbix servers"
+            }
+          },
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Network interfaces status"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$Group"
+              },
+              "host": {
+                "filter": "$Host"
+              },
+              "item": {
+                "filter": "/.*/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Network interfaces status",
+          "tooltip": {
+            "msResolution": true,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "Zabbix",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 14,
+          "isNew": true,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "repeatIteration": 1473389274200,
+          "scopedVars": {
+            "Group": {
+              "selected": true,
+              "text": "Zabbix servers",
+              "value": "Zabbix servers"
+            }
+          },
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Network socket status"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$Group"
+              },
+              "host": {
+                "filter": "$Host"
+              },
+              "item": {
+                "filter": "/.*/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Network socket status",
+          "tooltip": {
+            "msResolution": true,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "Zabbix",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 13,
+          "isNew": true,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": true,
+            "max": true,
+            "min": true,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "repeatIteration": 1473389274200,
+          "scopedVars": {
+            "Group": {
+              "selected": true,
+              "text": "Zabbix servers",
+              "value": "Zabbix servers"
+            }
+          },
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Network connect status"
+              },
+              "functions": [],
+              "group": {
+                "filter": "$Group"
+              },
+              "host": {
+                "filter": "$Host"
+              },
+              "item": {
+                "filter": "/.*/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Network connect status",
+          "tooltip": {
+            "msResolution": true,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": "Group",
+      "scopedVars": {
+        "Group": {
+          "selected": true,
+          "text": "Zabbix servers",
+          "value": "Zabbix servers"
+        }
+      },
+      "showTitle": false,
+      "title": "Ã¥Å¸ÂºÃ§Â¡â‚¬Ã¤Â¿Â¡Ã¦ÂÂ¯Ã§â€ºâ€˜Ã¦Å½Â§"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "ageField": true,
+          "datasource": "Zabbix",
+          "editable": true,
+          "error": false,
+          "hostField": true,
+          "id": 9,
+          "infoField": true,
+          "isNew": true,
+          "lastChangeField": true,
+          "limit": 10,
+          "links": [],
+          "okEventColor": "rgba(0, 245, 153, 0.45)",
+          "severityField": false,
+          "showEvents": {
+            "text": "Problems",
+            "value": "1"
+          },
+          "showTriggers": "all triggers",
+          "sortTriggersBy": {
+            "text": "last change",
+            "value": "lastchange"
+          },
+          "span": 12,
+          "statusField": false,
+          "targets": [
+            {}
+          ],
+          "title": "Tiggers",
+          "triggerSeverity": [
+            {
+              "color": "#B7DBAB",
+              "priority": 0,
+              "severity": "Not classified",
+              "show": true
+            },
+            {
+              "color": "#82B5D8",
+              "priority": 1,
+              "severity": "Information",
+              "show": true
+            },
+            {
+              "color": "#E5AC0E",
+              "priority": 2,
+              "severity": "Warning",
+              "show": true
+            },
+            {
+              "color": "#C15C17",
+              "priority": 3,
+              "severity": "Average",
+              "show": true
+            },
+            {
+              "color": "#BF1B00",
+              "priority": 4,
+              "severity": "High",
+              "show": true
+            },
+            {
+              "color": "#890F02",
+              "priority": 5,
+              "severity": "Disaster",
+              "show": true
+            }
+          ],
+          "triggers": {
+            "application": {
+              "filter": ""
+            },
+            "group": {
+              "filter": ""
+            },
+            "host": {
+              "filter": ""
+            },
+            "trigger": {
+              "filter": ""
+            }
+          },
+          "type": "alexanderzobnin-zabbix-triggers-panel"
+        }
+      ],
+      "title": "Ã¦Å Â¥Ã¨Â­Â¦"
+    }
+  ],
+  "time": {
+    "from": "now-5m",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": true,
+          "text": "Zabbix servers",
+          "value": "Zabbix servers"
+        },
+        "datasource": "Zabbix",
+        "hide": 0,
+        "includeAll": true,
+        "multi": true,
+        "name": "Group",
+        "options": [
+          {
+            "selected": false,
+            "text": "All",
+            "value": "$__all"
+          },
+          {
+            "selected": true,
+            "text": "Zabbix servers",
+            "value": "Zabbix servers"
+          }
+        ],
+        "query": "*",
+        "refresh": 0,
+        "regex": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "current": {
+          "tags": [],
+          "text": "test",
+          "value": [
+            "test"
+          ]
+        },
+        "datasource": "Zabbix",
+        "hide": 0,
+        "includeAll": false,
+        "multi": true,
+        "name": "Host",
+        "options": [
+          {
+            "selected": true,
+            "text": "test",
+            "value": "test"
+          },
+          {
+            "selected": false,
+            "text": "zabbix server",
+            "value": "zabbix server"
+          }
+        ],
+        "query": "$Group.*",
+        "refresh": 0,
+        "regex": "/.*/",
+        "type": "query",
+        "useTags": false
+      }
+    ]
+  },
+  "annotations": {
+    "list": []
+  },
+  "refresh": false,
+  "schemaVersion": 12,
+  "version": 1,
+  "links": [],
+  "gnetId": null
+}
