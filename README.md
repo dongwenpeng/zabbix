@@ -22,19 +22,11 @@
 还包括系统本地时间、系统启动时间、/etc/passwd和/etc/hosts文件检测、主机名、最大打开文件数、系统信息等。
 
 
+
+
 使用方法：
 
 把Template_Linux_System_Base.xml文件导入到zabbix web界面中即可，另外需要在zabbix-agent端把zabbix_agentd.d
 目录中的几个配置文件和scripts目录放在/etc/zabbix/zabbix_agentd.d/目录下，然后重启zabbix-agent即可。
 
-目录结果如下
-[root@localhost zabbix_agentd.d]# tree
-.
-├── scripts
-│   ├── disk_discovery.py
-│   ├── disk_status.sh
-│   └── mem_percent.sh
-├── userparameter_disk.conf
-├── userparameter_memory.conf
-├── userparameter_mysql.conf
-└── userparameter_network_connect.conf
+另外针对此模板还提供了Grafana图形展示模板，是一个JSON格式，直接导入到Grafana即可。Grafana是一个非常漂亮的Dashboard展示程序。
