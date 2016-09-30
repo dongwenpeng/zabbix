@@ -3,5 +3,6 @@
 MemTotal=`grep MemTotal /proc/meminfo | awk '{print $2}'`
 Buffers=`grep Buffers /proc/meminfo | awk '{print $2}'`
 Cached=`grep -w Cached /proc/meminfo | awk '{print $2}'`
-MemUse=`echo $[$MemTotal-$Buffers-$Cached]`
+Used=`free -k | grep -b1 used | awk '{print $3}' | tail -n1`
+MemUse=`echo $[$Used-$Buffers-$Cached]`
 python -c "print float(`echo $MemUse`)/float(`echo $MemTotal`)"
