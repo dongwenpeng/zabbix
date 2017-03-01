@@ -132,8 +132,12 @@ case $METRIC in
         used_memory=`$CMD -h $REDIS_IP -p $PORT info | grep -w "used_memory" | awk -F':' '{print $2}' | dos2unix`
         #maxmemory=`$CMD -h $REDIS_IP -p $PORT info | grep -w "maxmemory" | awk -F':' '{print $2}' | dos2unix`
         maxmemory=`$CMD -h $REDIS_IP -p $PORT CONFIG GET maxmemory | tail -n1 | dos2unix`
+        if [ ! "$mamemory" = 0 ];then
         if [ -n "$maxmemory" ];then
-            python -c "print float(`echo $used_memory`)/float(`echo $maxmemory`)" | cut -c 1,2,3,4
+            awk 'BEGIN{printf "%f\n",'$used_memory'/'$maxmemory'}'
+        else
+            echo 0
+        fi
         else
             echo 0
         fi
