@@ -13,7 +13,7 @@ CMD="/usr/local/bin/redis-cli"
 REDIS_IP=127.0.0.1 
 PORT="$1"
 METRIC="$2"
-PASSWD="123!@#"
+PASSWD="12345"
  
 if [ $# -lt 2 ];then
     echo "please set argument"
@@ -74,13 +74,22 @@ case $METRIC in
     'aof_enabled')
         echo $STATUS
         ;;
-    'total_connections_received')
-        echo $STATUS
-        ;;
-    'total_commands_processed')
-        echo $STATUS
-        ;;
     'instantaneous_ops_per_sec')
+        echo $STATUS
+        ;;
+    'instantaneous_input_kbps')
+        echo $STATUS
+        ;;
+    'instantaneous_output_kbps')
+        echo $STATUS
+        ;;
+    'rdb_last_save_time')
+        echo $STATUS
+        ;;
+    'rdb_last_bgsave_time_sec')
+        echo $STATUS
+        ;;
+    'aof_last_rewrite_time_sec')
         echo $STATUS
         ;;
     'expired_keys')
