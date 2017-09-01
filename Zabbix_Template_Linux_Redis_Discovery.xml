@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.0</version>
-    <date>2017-02-15T07:11:32Z</date>
+    <date>2017-09-01T03:18:18Z</date>
     <groups>
         <group>
             <name>Template For Base</name>
@@ -115,7 +115,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis[{#REDISPORT},aof_enabled]</key>
-                            <delay>3600</delay>
+                            <delay>60</delay>
                             <history>90</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -203,7 +203,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis[{#REDISPORT},cluster_enabled]</key>
-                            <delay>3600</delay>
+                            <delay>60</delay>
                             <history>90</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -338,7 +338,7 @@
                             <delay>60</delay>
                             <history>90</history>
                             <trends>365</trends>
-                            <status>0</status>
+                            <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
@@ -382,7 +382,7 @@
                             <delay>60</delay>
                             <history>90</history>
                             <trends>365</trends>
-                            <status>0</status>
+                            <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
@@ -593,57 +593,13 @@
                             <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Redis-$1-lru_clock</name>
-                            <type>0</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
-                            <key>redis[{#REDISPORT},lru_clock]</key>
-                            <delay>60</delay>
-                            <history>90</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>3</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>Redis_Status</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                        <item_prototype>
                             <name>Redis-$1-slave-master_host</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis[{#REDISPORT},master_host]</key>
-                            <delay>3600</delay>
+                            <delay>60</delay>
                             <history>90</history>
                             <trends>0</trends>
                             <status>0</status>
@@ -687,7 +643,51 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis[{#REDISPORT},master_link_status]</key>
-                            <delay>3600</delay>
+                            <delay>60</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Redis_Status</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <application_prototypes/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Redis-$1-slave-master_port</name>
+                            <type>0</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>redis[{#REDISPORT},master_port]</key>
+                            <delay>60</delay>
                             <history>90</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -731,7 +731,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis[{#REDISPORT},maxclients]</key>
-                            <delay>3600</delay>
+                            <delay>60</delay>
                             <history>90</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -775,7 +775,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis[{#REDISPORT},maxmemory]</key>
-                            <delay>3600</delay>
+                            <delay>60</delay>
                             <history>90</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -819,10 +819,10 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis[{#REDISPORT},redis_version]</key>
-                            <delay>3600</delay>
+                            <delay>60</delay>
                             <history>90</history>
                             <trends>365</trends>
-                            <status>0</status>
+                            <status>1</status>
                             <value_type>0</value_type>
                             <allowed_hosts/>
                             <units/>
@@ -863,55 +863,11 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis[{#REDISPORT},role]</key>
-                            <delay>3600</delay>
+                            <delay>60</delay>
                             <history>90</history>
                             <trends>365</trends>
                             <status>0</status>
                             <value_type>0</value_type>
-                            <allowed_hosts/>
-                            <units/>
-                            <delta>0</delta>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <formula>1</formula>
-                            <delay_flex/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <data_type>0</data_type>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>Redis_Status</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <application_prototypes/>
-                        </item_prototype>
-                        <item_prototype>
-                            <name>Redis-$1-slave-slave_read_only</name>
-                            <type>0</type>
-                            <snmp_community/>
-                            <multiplier>0</multiplier>
-                            <snmp_oid/>
-                            <key>redis[{#REDISPORT},slave_read_only]</key>
-                            <delay>3600</delay>
-                            <history>90</history>
-                            <trends>365</trends>
-                            <status>0</status>
-                            <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
                             <delta>0</delta>
@@ -951,7 +907,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis[{#REDISPORT},total_system_memory]</key>
-                            <delay>3600</delay>
+                            <delay>60</delay>
                             <history>90</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -995,7 +951,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis[{#REDISPORT},uptime_in_days]</key>
-                            <delay>3600</delay>
+                            <delay>60</delay>
                             <history>90</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -1086,7 +1042,7 @@
                             <delay>60</delay>
                             <history>90</history>
                             <trends>365</trends>
-                            <status>0</status>
+                            <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
@@ -1130,7 +1086,7 @@
                             <delay>60</delay>
                             <history>90</history>
                             <trends>365</trends>
-                            <status>0</status>
+                            <status>1</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
                             <units/>
@@ -1211,8 +1167,18 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Template Linux Redis Discovery:redis[{#REDISPORT},use_memory_percent].last()}&gt;90</expression>
-                            <name>Redis-{#REDISPORT}-usememory &gt; 90%</name>
+                            <expression>{Template Linux Redis Discovery:redis[{#REDISPORT},used_memory].last()}&gt;5242880000</expression>
+                            <name>Redis-{HOST.NAME}-{#REDISPORT}-usememory &gt; 5G</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description/>
+                            <type>0</type>
+                            <dependencies/>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template Linux Redis Discovery:redis[{#REDISPORT},use_memory_percent].last()}&gt;0.9</expression>
+                            <name>Redis-{HOST.NAME}-{#REDISPORT}-usememory &gt; 90%</name>
                             <url/>
                             <status>0</status>
                             <priority>3</priority>
@@ -1222,7 +1188,7 @@
                         </trigger_prototype>
                         <trigger_prototype>
                             <expression>{Template Linux Redis Discovery:redis[{#REDISPORT},connected_slaves].last()}&lt;1</expression>
-                            <name>Redis-{#REDISPORT} no-slave</name>
+                            <name>Redis-{HOST.NAME}-{#REDISPORT} no-slave</name>
                             <url/>
                             <status>1</status>
                             <priority>3</priority>
@@ -1232,7 +1198,7 @@
                         </trigger_prototype>
                         <trigger_prototype>
                             <expression>{Template Linux Redis Discovery:net.tcp.listen[{#REDISPORT}].last()}&lt;&gt;1</expression>
-                            <name>Redis-{#REDISPORT} shutdown</name>
+                            <name>Redis-{HOST.NAME}-{#REDISPORT} shutdown</name>
                             <url/>
                             <status>0</status>
                             <priority>4</priority>
@@ -1241,7 +1207,148 @@
                             <dependencies/>
                         </trigger_prototype>
                     </trigger_prototypes>
-                    <graph_prototypes/>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>Redis {#REDISPORT} Port instantaneous_ops_per_sec</name>
+                            <width>900</width>
+                            <height>200</height>
+                            <yaxismin>0.0000</yaxismin>
+                            <yaxismax>100.0000</yaxismax>
+                            <show_work_period>1</show_work_period>
+                            <show_triggers>1</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>0</ymin_type_1>
+                            <ymax_type_1>0</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>FF6666</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>Template Linux Redis Discovery</host>
+                                        <key>redis[{#REDISPORT},instantaneous_ops_per_sec]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
+                            <name>Redis {#REDISPORT} Port Used memory</name>
+                            <width>900</width>
+                            <height>200</height>
+                            <yaxismin>0.0000</yaxismin>
+                            <yaxismax>100.0000</yaxismax>
+                            <show_work_period>1</show_work_period>
+                            <show_triggers>1</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>0</ymin_type_1>
+                            <ymax_type_1>0</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>1A7C11</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>Template Linux Redis Discovery</host>
+                                        <key>redis[{#REDISPORT},used_memory]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
+                            <name>Redis {#REDISPORT} used_memory/used_memory_rss</name>
+                            <width>900</width>
+                            <height>200</height>
+                            <yaxismin>0.0000</yaxismin>
+                            <yaxismax>100.0000</yaxismax>
+                            <show_work_period>1</show_work_period>
+                            <show_triggers>1</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>0</ymin_type_1>
+                            <ymax_type_1>0</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>1A7C11</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>Template Linux Redis Discovery</host>
+                                        <key>redis[{#REDISPORT},used_memory]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>F63100</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>Template Linux Redis Discovery</host>
+                                        <key>redis[{#REDISPORT},used_memory_rss]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
+                            <name>Redis {#REDISPORT} Used_memory_percent</name>
+                            <width>900</width>
+                            <height>200</height>
+                            <yaxismin>0.0000</yaxismin>
+                            <yaxismax>100.0000</yaxismax>
+                            <show_work_period>1</show_work_period>
+                            <show_triggers>1</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>0</ymin_type_1>
+                            <ymax_type_1>0</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>1A7C11</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>Template Linux Redis Discovery</host>
+                                        <key>redis[{#REDISPORT},use_memory_percent]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
                     <host_prototypes/>
                 </discovery_rule>
             </discovery_rules>
