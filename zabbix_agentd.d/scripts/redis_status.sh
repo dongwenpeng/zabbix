@@ -13,7 +13,7 @@ CMD="/usr/local/bin/redis-cli"
 REDIS_IP=127.0.0.1 
 PORT="$1"
 METRIC="$2"
-PASSWD=""
+PASSWD="123!@#"
  
 if [ $# -lt 2 ];then
     echo "please set argument"
@@ -22,8 +22,10 @@ fi
 
 if [ ! -n "$PASSWD" ];then
     STATUS=`$CMD -h $REDIS_IP -p $PORT info | grep -w "$METRIC" | awk -F':' '{print $2}'`
+    BACK="$CMD -h $REDIS_IP -p $PORT info"
 else
     STATUS=`$CMD -a $PASSWD -h $REDIS_IP -p $PORT info | grep -w "$METRIC" | awk -F':' '{print $2}'`
+    BACK="$CMD -a $PASSWD -h $REDIS_IP -p $PORT info"
 fi
 
 case $METRIC in
@@ -44,7 +46,11 @@ case $METRIC in
         echo $STATUS
         ;;
     'maxclients')
-        STATUS=`$CMD -h $REDIS_IP -p $PORT CONFIG GET maxclients | tail -n1`
+        if [ -n "$PASSWD" ];then
+            STATUS=`$CMD -h $REDIS_IP -p $PORT -a $PASSWD CONFIG GET maxclients | tail -n1`
+        else
+            STATUS=`$CMD -h $REDIS_IP -p $PORT CONFIG GET maxclients | tail -n1`
+        fi
         echo $STATUS
         ;;
     'blocked_clients')
@@ -60,14 +66,9 @@ case $METRIC in
         echo $STATUS
         ;;
     'total_system_memory')
-        if [ -n "$STATUS" ];then
-          echo $STATUS
-        else
-          echo 0
-        fi
+        echo $STATUS
         ;;
     'maxmemory')
-        STATUS=`$CMD -h $REDIS_IP -p $PORT CONFIG GET maxmemory | tail -n1`
         echo $STATUS
         ;;
     'aof_enabled')
@@ -115,12 +116,6 @@ case $METRIC in
     'connected_slaves')
         echo $STATUS
         ;;
-    'used_cpu_sys')
-        echo $STATUS
-        ;;
-    'used_cpu_user')
-        echo $STATUS
-        ;;
     'cluster_enabled')
         if [ -n "$STATUS" ];then
           echo $STATUS
@@ -129,15 +124,11 @@ case $METRIC in
         fi
         ;;
     'use_memory_percent')
-        used_memory=`$CMD -h $REDIS_IP -p $PORT info | grep -w "used_memory" | awk -F':' '{print $2}' | dos2unix`
-        #maxmemory=`$CMD -h $REDIS_IP -p $PORT info | grep -w "maxmemory" | awk -F':' '{print $2}' | dos2unix`
-        maxmemory=`$CMD -h $REDIS_IP -p $PORT CONFIG GET maxmemory | tail -n1 | dos2unix`
-        if [ ! "$mamemory" = 0 ];then
+        used_memory=`$BACK | grep -w "used_memory" | awk -F':' '{print $2}' | dos2unix`
+        maxmemory=`$BACK | grep -w "maxmemory" | awk -F':' '{print $2}' | dos2unix`
+        #maxmemory=`$CMD -h $REDIS_IP -p $PORT CONFIG GET maxmemory | tail -n1 | dos2unix`
         if [ -n "$maxmemory" ];then
-            awk 'BEGIN{printf "%f\n",'$used_memory'/'$maxmemory'}'
-        else
-            echo 0
-        fi
+            python -c "print float(`echo $used_memory`)/float(`echo $maxmemory`)" | cut -c 1,2,3,4
         else
             echo 0
         fi
@@ -169,7 +160,7 @@ case $METRIC in
           if [ $STATUS == "up" ];then
             echo 1
           else
-            echo 0
+            echo 0  
           fi
         else
           echo 0

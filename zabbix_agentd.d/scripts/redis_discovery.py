@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import os
 import json
-t=os.popen("""sudo netstat -nltp|awk -F: '/redis-server/&&/LISTEN/{print $2}'|awk '{print $1}'| grep -v grep | grep -v '^$'   """)
+t=os.popen("""ps aux | grep redis | grep redis-server | grep -v sentinel | grep -v grep | awk -F'redis' '{print $2}' | awk -F':' '{print $2}' | grep -v '^$'""")
 ports = []
 for port in  t.readlines():
         r = os.path.basename(port.strip())
